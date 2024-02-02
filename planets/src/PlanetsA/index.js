@@ -23,6 +23,7 @@ export default function PlanetsA() {
   useEffect(() => {
     const listener = (e) => {
       if (isNavBlocked1) {
+        console.log('Cancel navigation WITHOUT comparison of url')
         e.detail.cancelNavigation();
       }
     }
@@ -40,6 +41,7 @@ export default function PlanetsA() {
         new URL(e.detail.newUrl).pathname === '/planets/b'
       ) {
         if (isNavBlocked2) {
+          console.log('Cancel navigation WITH comparison of url')
           e.detail.cancelNavigation();
         }
       }

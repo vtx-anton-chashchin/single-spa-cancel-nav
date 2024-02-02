@@ -42,7 +42,7 @@
 
   All of them routes to the pathname `/planets/b` using HTML Anchor or React Router
 
-6. See that despite navigation is blocked we have been navigated to the `planets/b`
+6. See that despite navigation is blocked we have been navigated to the `planets/b` and there are multiply logs of like `Cancel navigation WITHOUT comparison of url` in a console
 7. Back to the `/planets/a` by any preferred way and repeat this checklist again with a different type of link/button in case 5
 
 **Expected behavior: When navigation is blocked we cant navigate to the `/planets/b`**
@@ -61,7 +61,7 @@
 
   All of them routes to the pathname `/planets/b` using HTML Anchor or React Router
 
-6. See that despite navigation is blocked we have been navigated to the `planets/b` and quickly jumped back with unmounting of Page A, causing the component to lose state
+6. See that despite navigation is blocked we have been navigated to the `planets/b` and quickly jumped back with unmounting of Page A, causing the component to lose state and there are few logs like `Cancel navigation WITH comparison of url` in a console
 7. Back to the `/planets/a` by any preferred way and repeat this checklist again with a different type of link/button in case 5
 
 **Expected behavior: While navigation is blocked component will not be unmounted and will not lose its state**
